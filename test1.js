@@ -4,7 +4,7 @@ function init() {
 
     //alert("hello")
     var i = 1;
-    var maxIterations = 15; //******** Set to 100 when done ********
+    var maxIterations = 20; //******** Set to 100 when done ********
 
     var randomNumberArray = []
     var averageArray = []
@@ -54,9 +54,14 @@ function buildTable(randomNumberArray) {
     html+=                  "<th>EMA</th>"
     html+=              "</tr>"
     html+=          "</thead>"
-    html+=          "<tbody>"
+    html +=     "<tbody>"
 
-    for (x = 0 ; x < arrayLength; x++) {
+    var startLoop = arrayLength - 10
+    if (startLoop < 0) {
+        startLoop = 0
+    }
+    
+    for (x = startLoop ; x < arrayLength; x++) {
 
         //alert(x)
         html+=      "<tr>"
