@@ -4,7 +4,7 @@ function init() {
 
     //alert("hello")
     var i = 1;
-    var maxIterations = 20; //******** Set to 100 when done ********
+    var maxIterations = 15; //******** Set to 100 when done ********
 
     var randomNumberArray = []
     var averageArray = []
@@ -13,13 +13,13 @@ function init() {
         if (i <= maxIterations) {
             //alert(i)
 
-            randomNumber = getRandomNumber()
-            //alert(randomNumber)
-
+            var randomNumber = getRandomNumber()
             randomNumberArray.push(randomNumber)
-            //alert(randomNumberArray)
 
-            buildTable(randomNumberArray)
+            var average = getAverage(randomNumberArray)
+            averageArray.push(average)
+            
+            buildTable(randomNumberArray, averageArray)
 
             i++;
         } else {
@@ -27,6 +27,23 @@ function init() {
             clearInterval(repeater);
         }
     }, 1000);
+
+}
+
+function getAverage(randomNumberArray) {
+
+    var sum = 0
+    var average
+
+    for (var i = 0; i < randomNumberArray.length; i++) {
+        
+        sum += randomNumberArray[i]  
+
+    }
+
+    average = sum / randomNumberArray.length
+
+    return average
 
 }
 
@@ -40,7 +57,7 @@ function getRandomNumber() {
 
 }
 
-function buildTable(randomNumberArray) {
+function buildTable(randomNumberArray, averageArray) {
 
     //alert(randomNumberArray)
     var arrayLength = randomNumberArray.length
@@ -66,7 +83,7 @@ function buildTable(randomNumberArray) {
         //alert(x)
         html+=      "<tr>"
         html+=          "<td>" + randomNumberArray[x] +"</td>"
-        html+=          "<td>"+ x + "</td>"
+        html +=         "<td>" + Math.round(averageArray[x] * 100) / 100 + "</td>"
         html+=      "</tr>"
 
     }
