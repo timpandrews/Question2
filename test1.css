@@ -1,0 +1,12 @@
+﻿h1 { 
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+table {
+    border: 2px solid black;
+}
+
+th {
+    font-weight: bold;
+}
