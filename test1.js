@@ -11,7 +11,7 @@ function init() {
 
             getRandomNumber()
 
-            alert(randomNumber)
+          
 
             alert(i)
             i++;
@@ -27,9 +27,7 @@ function getRandomNumber() {
 
     var randomNumber = Math.floor(Math.random() * 10) + 1
 
-    return randomNumber
-
-    //alert(random);
+    alert(randomNumber);
 
 }
 
