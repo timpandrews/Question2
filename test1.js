@@ -4,7 +4,10 @@ function init() {
 
     alert("hello")
     var i = 1;
-    var maxIterations = 2; //******** Set to 100 when done ********
+    var maxIterations = 5; //******** Set to 100 when done ********
+
+    var randomNumberArray = []
+    var averageArray = []
 
     var repeater = setInterval(function () {
         if (i <= maxIterations) {
@@ -12,6 +15,9 @@ function init() {
 
             randomNumber = getRandomNumber()
             alert(randomNumber)
+
+            randomNumberArray.push(randomNumber)
+            alert(randomNumberArray)
 
             i++;
         } else {
