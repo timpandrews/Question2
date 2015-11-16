@@ -10,3 +10,22 @@ table {
 th {
     font-weight: bold;
 }
+
+td {
+    text-align: center;
+}
+
+.aboveEMA {
+    color: #006600;
+    background-color: #ccffcc;
+}
+
+.belowEMA {
+    color: #661400;
+    background-color: #ffd6cc;
+}
+
+.equalToEMA {
+    color: #333333;
+    background-color: #e6e6e6;
+}
