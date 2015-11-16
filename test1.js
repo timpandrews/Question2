@@ -8,12 +8,11 @@ function init() {
 
     var repeater = setInterval(function () {
         if (i <= maxIterations) {
-
-            getRandomNumber()
-
-          
-
             alert(i)
+
+            randomNumber = getRandomNumber()
+            alert(randomNumber)
+
             i++;
         } else {
             alert("done")
@@ -27,7 +26,9 @@ function getRandomNumber() {
 
     var randomNumber = Math.floor(Math.random() * 10) + 1
 
-    alert(randomNumber);
+    //alert(randomNumber)
+
+    return randomNumber;
 
 }
 
